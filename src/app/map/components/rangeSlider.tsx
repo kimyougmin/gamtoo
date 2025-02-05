@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 interface MultiRangeProps {
-  value?: Record<string, number>;
+  value: any;
   fixedMinPrice: number;
   fixedMaxPrice: number;
   min: number;

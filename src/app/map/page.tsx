@@ -24,7 +24,7 @@ export default function MapPage() {
 // state
   const [filters, setFilters] = useState<Record<string, string | number | undefined>>({});
   const [item, setItem] = useState<MapItem[]>([]);
-  const [load, setLoad] = useState<RoadItem>();
+  const [load, setLoad] = useState<RoadItem[]>([]);
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const [isLoadOpen, setIsLoadOpen] = useState<boolean>(false);
   const [isNavOpen, setIsNavOpen] = useState<boolean>(true);
@@ -63,7 +63,11 @@ export default function MapPage() {
     const data = await axios.get(
       `http://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=10000&${
         params ? params : "&ccbaCncl=N&ccbaKdcd=13&ccbaCtcd=11"
-      }`
+      }`,{
+        headers: {
+          Authorization: undefined, 
+        },
+      }
     );
     xmlToJsonFilterHandler(data.data);
   };
@@ -180,7 +184,7 @@ export default function MapPage() {
       <BasicMap searchLoadHandler={searchLoadHandler} data={item} load={load}>
         <div
           className={`absolute ${
-            isNavOpen ? "-left-[383px]" : "left-10"
+            isNavOpen ? "-left-[380px]" : "left-10"
           } transition-all duration-300 max-w-96 z-50 top-36`}
         >
           {!isLoadOpen ? (

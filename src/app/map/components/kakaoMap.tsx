@@ -53,7 +53,11 @@ export default function BasicMap({
 // 마커 클릭시 상세정보 데이터 함수
   const getDetailData = async (pos: MapItem) => {
     const url = `http://www.khs.go.kr/cha/SearchKindOpenapiDt.do?ccbaKdcd=${pos.ccbaKdcd}&ccbaCtcd=${pos.ccbaCtcd}&ccbaAsno=${pos.ccbaAsno}&ccbaCpno=${pos.ccbaCpno}`;
-    const response = await axios.get(url);
+    const response = await axios.get(url,{
+      headers:{
+        Authorization:undefined
+      }
+    });
     const parseString = xml2.parseString;
     parseString(
       response.data,

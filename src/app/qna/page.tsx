@@ -121,8 +121,8 @@ export default function QnaPage() {
       <div className="max-w-4xl mx-auto px-4 flex flex-col gap-12">
         <div className="flex flex-col items-center gap-6">
           <h3 className="lg:text-3xl tracking-wide text-xl sm:text-2xl font-light">
-            <span className="font-semibold">
-              총 <span className="text-[#B23742]">{filteredPosts.length}</span>개
+            <span className="font-bold">
+              총 <span className="font-light text-[#B23742]">{filteredPosts.length}</span>개
             </span>
             의 글이 등록되어 있습니다.
           </h3>
