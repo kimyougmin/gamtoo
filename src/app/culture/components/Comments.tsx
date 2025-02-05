@@ -149,7 +149,7 @@ export default function Comments({ccbaKdcd, ccbaAsno, ccbaCtcd}: Props) {
                 </div>
               );
             })
-          : <p>댓글이 없습니다...</p>}
+          : <p></p>}
       </div>
     </div>
   </div>
