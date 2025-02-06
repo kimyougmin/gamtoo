@@ -59,7 +59,6 @@ export default function HeritageCard(props: HeritageCardProps) {
     <div>
       <div className="flex items-center font-pretendard text-gray-400 font-semibold text-xs pl-5 pr-4 space-x-2">
         <div className="flex-grow border-t border-gray-300"></div>
-         {/* SVG 아이콘 */} <div className="flex-grow border-t border-gray-300"></div>
   <svg
     width="17"
     height="18"
@@ -136,7 +135,6 @@ export default function HeritageCard(props: HeritageCardProps) {
         ))}
       </div>
 
-      {/*  페이지네이션 */}
       <Pagination
         currentPage={paginationInfo.pageIndex}
         totalCnt={paginationInfo.totalCnt}

@@ -4,12 +4,11 @@ import SearchCategory from "./SearchCategory";
 import { useCallback, useEffect, useState } from "react";
 import { CatCode2String } from "@/components/quiz/CHCategories";
 import { parseStringPromise } from "xml2js";
-import { fetchHeritageList } from '../types/useHeritageData';
 
 
 
 export default function SearchCard() {
-  // 지정종목 카테고리 (예: CatCode2String은 { '11': '국보', '12': '보물', ... } 형태)
+
   const jjjm = Object.values(CatCode2String);
   const jjjmCode = Object.keys(CatCode2String).map((item) => parseInt(item));  
   const yhjm = ["유적건조물", "기록유산", "유물", "무형유산", "자연유산", "등록문화유산"];
@@ -22,7 +21,6 @@ export default function SearchCard() {
   const [jyChecked, setJyjmChecked] = useState(jy.map(() => false));
   const [sdChecked, setSdChecked] = useState(sd.map(() => false));
 
-  const [designatedSearchResult, setDesignatedSearchResult] = useState<any[]>([]);
   const jjjmCheckedHandler = useCallback(
     (jjjmArray: boolean[]) => {
       setJjjmChecked(jjjmArray)
@@ -66,44 +64,6 @@ export default function SearchCard() {
     setYhjmChecked(yhjm.map(() => false));
     setJyjmChecked(jy.map(() => false));
     setSdChecked(sd.map(() => false));
-  };
-
-  // 지정종목 API 호출 함수  
-  const fetchDesignatedData = async (code: number) => {
-    try {
-      const API_URL = 'http://www.khs.go.kr/cha/SearchKindOpenapiList.do';
-      // pageIndex와 pageUnit 파라미터를 추가하여 모든 데이터를 요청합니다.
-      const url = `${API_URL}?ccbaKdcd=${code}&pageIndex=1&pageUnit=5000`;
-      const response = await fetch(url);
-      if (!response.ok) throw new Error(`API 요청 실패: ${response.statusText}`);
-      const xmlText = await response.text();
-      const result = await parseStringPromise(xmlText);
-      console.log(`코드 ${code}에 대한 결과:`, result);
-    } catch (error) {
-      console.error(`코드 ${code} API 요청 에러:`, error);
-    }
-  };
-
-  // "검색하기" 버튼 클릭 시 호출되는 핸들러
-  const handleDesignatedSearch = async () => {
-    // 지정종목(지정종목 div)에서 체크된 항목의 코드 추출
-    const selectedCodes = jjjmChecked.reduce((acc: number[], checked, index) => {
-      if (checked) {
-        acc.push(jjjmCode[index]);
-      }
-      return acc;
-    }, []);
-    
-    // 선택된 코드가 없으면 알림
-    if (selectedCodes.length === 0) {
-      console.log("지정종목에서 선택된 항목이 없습니다.");
-      return;
-    }
-    
-    // 선택된 각 코드에 대해 API 요청 실행
-    for (const code of selectedCodes) {
-      await fetchDesignatedData(code);
-    }
   };
 
   return (
@@ -161,7 +121,6 @@ export default function SearchCard() {
   
             <div className="relative">
               <button
-                onClick={handleDesignatedSearch}  // 지정종목 API 요청 함수 호출
                 className="font-pretendard px-4 py-1.5 border border-[#FF5DAB] text-[#FF5DAB] font-semibold rounded-lg 
                   hover:text-white hover:bg-[#FF5DAB] transition duration-200 absolute -top-16 right-1"
               >
@@ -246,5 +205,6 @@ export default function SearchCard() {
         )}
       </div>
     </div>
+    
   );
 }
