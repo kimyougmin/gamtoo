@@ -48,10 +48,10 @@ export default function DetailMoreImage() {
   return (
     <div>
       <div className="w-full p-6 mt-6 overflow-x-auto h-[60vh]">
-        <h1 className="text-[#FF5DAB] font-pretendard text-xl font-semibold tracking-extra-wide z-20 relative mt-2 ml-20">
+        <h1 className="text-[#FF5DAB] font-Pretendard text-xl font-semibold tracking-extra-wide z-20 relative mt-2 ml-20">
           SEE MORE
         </h1>
-        <h1 className="text-black text-4xl font-pretendard font-semibold mb-3 ml-20 mt-3">
+        <h1 className="text-black text-4xl font-Pretendard font-semibold mb-3 ml-20 mt-3">
           이미지 더보기
         </h1>
         <div className="w-[92%] h-[1px] bg-gray-400 ml-20" />

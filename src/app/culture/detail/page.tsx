@@ -46,7 +46,7 @@ export default function Detail() {
 
   {/* 왼쪽 콘텐츠 */}
   <div className="w-2/3 p-4 mt-[3vh] mr-32 ml-20">
-    <h1 className="text-[#FF5DAB] font-pretendard text-xl ml-1 mt-1 font-semibold tracking-extra-wide">
+    <h1 className="text-[#FF5DAB] font-Pretendard text-xl ml-1 mt-1 font-semibold tracking-extra-wide">
       ABOUT
     </h1>
     <h1 className="text-black text-4xl font-pretendard tracking-wide font-extrabold mb-3 mt-3">

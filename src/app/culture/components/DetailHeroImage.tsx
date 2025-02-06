@@ -26,9 +26,9 @@ return(
   alt="CultureImage"
   className="bg-slate-300 w-full h-96 object-cover"
 />
-<h1 className="absolute top-[46%] left-[10.5%] font-pretendard text-white text-3xl font-semibold">{heritageCategory}</h1>
-<h1 className="absolute top-[60%] left-[10%] font-pretendard text-white text-5xl font-bold">{heritageName} ({heritageHanja})</h1>
-<h1 className="absolute top-[75%] left-[10%] font-pretendard text-white text-lg font-normal flex items-center">
+<h1 className="absolute top-[46%] left-[10.5%] font-Pretendard text-white text-3xl font-semibold">{heritageCategory}</h1>
+<h1 className="absolute top-[60%] left-[10%] font-Pretendard text-white text-5xl font-bold">{heritageName} ({heritageHanja})</h1>
+<h1 className="absolute top-[75%] left-[10%] font-Pretendard text-white text-lg font-normal flex items-center">
   <svg
     width="20"
     height="21"

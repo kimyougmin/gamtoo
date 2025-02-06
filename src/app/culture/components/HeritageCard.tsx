@@ -106,13 +106,13 @@ export default function HeritageCard(props: HeritageCardProps) {
               </div>
               {/*  텍스트 영역 */}
               <div className="text-left ml-2 mb-3">
-                <span className="font-pretendard text-[#4F6CF3] font-semibold text-base">
+                <span className="font-Pretendard text-[#4F6CF3] font-semibold text-base">
                   {heritage.ccmaName}
                 </span>
-                <p className="text-black font-pretendard font-extrabold text-lg">
+                <p className="text-black font-Pretendard font-extrabold text-lg">
                   {heritage.ccbaMnm1}
                 </p>
-                <div className="flex items-center font-pretendard text-gray-600 text-sm font-bold relative translate-y-1">
+                <div className="flex items-center font-Pretendard text-gray-600 text-sm font-bold relative translate-y-1">
                 <svg
                 width="12"
                 height="12"
