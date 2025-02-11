@@ -89,14 +89,14 @@ export default function Comments({ccbaKdcd, ccbaAsno, ccbaCtcd}: Props) {
     }
   }
   return (
-    <div className="w-3/4 mb-16 pr-20 font-Pretendard">
+    <div className="w-3/4 mb-16 pr-20 font-pretendard">
     <div className="bg-white p-4 h-[450px] mt-[4.5vh] ml-20">
-      <h1 className="text-[#FF5DAB] font-Pretendard text-xl font-semibold tracking-extra-wide z-20 relative mt-2 ml-2">
+      <h1 className="text-[#FF5DAB] font-pretendard text-xl font-semibold tracking-extra-wide z-20 relative mt-2 ml-2">
         COMMENTS
       </h1>
   
       <div className="flex items-center justify-between mb-3 ml-2 mt-3">
-        <h1 className="text-black text-4xl font-Pretendard font-semibold">
+        <h1 className="text-black text-4xl font-pretendard font-semibold">
           댓글 {cultureComments.commentType.length}개
         </h1>
       </div>

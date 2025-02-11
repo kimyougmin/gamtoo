@@ -48,7 +48,7 @@ export default function DetailMoreImage() {
   return (
     <div>
       <div className="w-full p-6 mt-6 overflow-x-auto h-[60vh]">
-        <h1 className="text-[#FF5DAB] font-Pretendard text-xl font-semibold tracking-extra-wide z-20 relative mt-2 ml-20">
+        <h1 className="text-[#FF5DAB] font-pretendard text-xl font-semibold tracking-extra-wide z-20 relative mt-2 ml-20">
           SEE MORE
         </h1>
         <h1 className="text-black text-4xl font-Pretendard font-semibold mb-3 ml-20 mt-3">
